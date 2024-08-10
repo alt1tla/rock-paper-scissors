@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="./static/img/altlogo.ico" />
+    <link rel="stylesheet" href="./static/css/reset.css" />
+    <link rel="stylesheet" href="./static/css/style.css" />
+    <script
+      src="https://kit.fontawesome.com/ae8734ff0d.js"
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="./main.js"></script>
+    <title>Rock Paper Scissors</title>
+  </head>
+  <body>
+    <div class="container">
+      <p class="exo-2-600 description">Extended version:</p>
+      <label class="switch">
+        <input id="toggleSwitch" type="checkbox" placeholder="checkbox" />
+        <span class="slider"></span>
+      </label>
+      <div class="score-row">
+        <div class="block">
+          <span class="exo-2-400"
+            >wins: <span class="wins exo-2-400">0</span></span
+          >
+          <span class="exo-2-400"
+            >losses: <span class="losses exo-2-400">0</span></span
+          >
+        </div>
+        <div class="block">
+          <span class="exo-2-400"
+            >rounds: <span class="rounds exo-2-400">0</span></span
+          >
+          <span class="exo-2-400"
+            >draws: <span class="draws exo-2-400">0</span></span
+          >
+        </div>
+      </div>
+      <div class="controls">
+        <button
+          onclick="playGameRPS('rock')"
+          class="fa-solid fa-hand-back-fist"
+        ></button>
+        <button
+          onclick="playGameRPS('paper')"
+          class="fa-solid fa-hand"
+        ></button>
+        <button
+          onclick="playGameRPS('scissors')"
+          class="fa-solid fa-hand-scissors"
+        ></button>
+      </div>
+      <div class="controls-extended hide">
+        <button
+          onclick="playGameRPSLS('rock')"
+          class="fa-solid fa-hand-back-fist"
+        ></button>
+        <button
+          onclick="playGameRPSLS('paper')"
+          class="fa-solid fa-hand"
+        ></button>
+        <button
+          onclick="playGameRPSLS('scissors')"
+          class="fa-solid fa-hand-scissors"
+        ></button>
+        <button
+          onclick="playGameRPSLS('lizard')"
+          class="fa-solid fa-hand-lizard"
+        ></button>
+        <button
+          onclick="playGameRPSLS('spock')"
+          class="fa-solid fa-hand-spock"
+        ></button>
+      </div>
+      <div class="score-column">
+        <span class="exo-2-400"
+          >computer:
+          <span class="computerDisplay exo-2-400">waiting</span></span
+        >
+        <span class="result exo-2-600">you choose first</span>
+      </div>
+      <div class="score-row mb-0">
+        <button id="btn-reset" class="reset exo-2-600">reset</button>
+        <button id="btn-rules" class="rules exo-2-600">rules</button>
+      </div>
+
+      <dialog id="dialog">
+        <div class="score-column mb-0">
+          <p class="exo-2-600">Rules:</p>
+          <p class="exo-2-600">vanilla version:</p>
+          <ul class="exo-2-400 score-column">
+            <li>scissors cut paper</li>
+            <li>paper covers rock</li>
+            <li>rock crushes scissors</li>
+          </ul>
+          <p class="exo-2-600">extended version:</p>
+          <ul class="exo-2-400 score-column">
+            <li>rock crushes lizard</li>
+            <li>lizard poisons Spock</li>
+            <li>Spock smashes scissors</li>
+            <li>scissors decapitates lizard</li>
+            <li>lizard eats paper</li>
+            <li>paper disproves Spock</li>
+            <li>Spock vaporizes rock</li>
+          </ul>
+          <div class="score-row mb-0">
+            <button id="btn-close" class="close exo-2-600">close</button>
+          </div>
+        </div>
+      </dialog>
+    </div>
+  </body>
+</html>
