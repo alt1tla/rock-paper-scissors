@@ -1,0 +1,273 @@
+/* Font */
+
+@font-face {
+  font-family: "Exo 2";
+  src: url("../font/Exo2.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.exo-2-200 {
+  font-family: "Exo 2", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.exo-2-300 {
+  font-family: "Exo 2", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.exo-2-400 {
+  font-family: "Exo 2", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.exo-2-500 {
+  font-family: "Exo 2", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.exo-2-600 {
+  font-family: "Exo 2", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.exo-2-700 {
+  font-family: "Exo 2", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.exo-2-800 {
+  font-family: "Exo 2", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.exo-2-900 {
+  font-family: "Exo 2", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+}
+
+/* Variables */
+
+:root {
+  /* Colors */
+  --bg-color: #fefdf8;
+  --text-color: #0e1116;
+  --bg-accent-color: #f0a963;
+  --accent-color-hover: #374a67;
+  --accent-color: #61a1d7;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-size: 1rem;
+}
+
+dialog{
+  background-color: var(--bg-color);
+  width: 400px;
+  padding: 25px;
+  position: absolute;
+  transform: translate(-50%,-50%);
+  top: 50%;
+  left: 50%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+  border-radius: 25px;
+  color: var(--text-color); 
+}
+
+dialog p {
+  font-size: 1.2rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-color);
+  width: 400px;
+  padding: 25px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+  border-radius: 25px;
+  -webkit-perspective: 350px;
+  perspective: 350px;
+}
+
+
+.description{
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+
+.score-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 25px;
+  gap: 25px;
+}
+
+.score-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 25px;
+  gap: 5px;
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.controls,
+.controls-extended {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 25px;
+  margin-bottom: 25px;
+}
+
+.controls,
+.controls-extended button {
+  border: none;
+  cursor: pointer;
+  font-size: 3rem;
+  color: var(--text-color);
+}
+
+.controls button:hover {
+  transform: scale(1.1);
+  transition: all ease-in-out 0.4s;
+  color: var(--bg-accent-color);
+}
+
+.controls-extended button:hover {
+  transform: scale(1.1);
+  transition: all ease-in-out 0.4s;
+  color: var(--bg-accent-color);
+}
+
+.controls button:focus {
+  transform: scale(1.1);
+  transition: all ease-in-out 0.4s;
+}
+
+.controls-extended button:focus {
+  transform: scale(1.1);
+  transition: all ease-in-out 0.4s;
+}
+
+.hide {
+  display: none;
+}
+
+.reset, .rules, .close {
+  background-color: var(--bg-color);
+  width: max-content;
+  padding: 25px 40px;
+  border-radius: 25px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+  cursor: pointer;
+  transition: all ease-in-out 0.4s;
+}
+
+.reset:hover {
+  background-color: var(--bg-accent-color);
+}
+
+.rules:hover {
+  background-color: var(--bg-accent-color);
+}
+
+.close:hover{
+  background-color: var(--bg-accent-color);
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin-bottom: 25px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--text-color);
+  -webkit-transition: 0.4s;
+  transition: all ease-in-out 0.4s;
+  border-radius: 5px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 25px;
+  width: 25px;
+  left: 5px;
+  bottom: 5px;
+  background-color: var(--bg-color);
+  -webkit-transition: 0.4s;
+  transition: all ease-in-out 0.4s;
+  border-radius: 5px;
+}
+
+input:checked + .slider {
+  background-color: var(--bg-accent-color);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(25px);
+  -ms-transform: translateX(25px);
+  transform: translateX(25px);
+}
+
+.mb-0{
+  margin-bottom: 0;
+}
+
