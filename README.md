@@ -27,3 +27,8 @@ When you click on the "rules" button, a modal window with the rules of the game 
 ## Extended version
 
 The toggle switch changes the number of possible combinations for the game. Additional pieces: Lizard and Spock.
+
+## Screentshots
+
+<img src="./static/img/screenshot-1.jpeg" alt="rock paper scissors interface" />
+<img src="./static/img/screenshot-2.jpeg" alt="rock paper scissors rules" />
